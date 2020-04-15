@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754.svg?branch=master)](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754)
 # TravisCIDemo754
 
 ## Instructions for students!
