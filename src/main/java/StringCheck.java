@@ -5,6 +5,7 @@ public class StringCheck {
      * - Check if the string is a palindrome (a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam).
      * - Please return True if the string is a palindrome, otherwise return False
      * - Note: do not change method signature
+     * '' counts as a palindrome. does not include spaces. lower case only.
      */
     public boolean isPalindrome (final String str) {
         throw new RuntimeException("Write your code here");
