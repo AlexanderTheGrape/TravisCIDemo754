@@ -8,7 +8,19 @@ public class StringCheck {
      * '' counts as a palindrome. does not include spaces. lower case only.
      */
     public boolean isPalindrome (final String str) {
-        throw new RuntimeException("Write your code here");
+        try {
+            String lowercaseStr = str.toLowerCase();
+            String letters[] = lowercaseStr.split("");
+
+            for (int i = 0; i < letters.length; i++) {
+                if (letters[i] != letters[-1 * i]) {
+                    return false;
+                }
+            }
+            return true;
+        } catch(Exception e){
+            return false;
+        }
     }
 
     /**

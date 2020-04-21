@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 public class StringCheckTest {
     private StringCheck stringCheck = new StringCheck();
 
-    //@Test
+    @Test
     public void testIsPalindrome() {
         assertFalse(stringCheck.isPalindrome("aabb"));
         assertFalse(stringCheck.isPalindrome(null));
@@ -12,6 +12,8 @@ public class StringCheckTest {
         assertTrue(stringCheck.isPalindrome(""));
         assertTrue(stringCheck.isPalindrome("abba"));
         assertTrue(stringCheck.isPalindrome("tattarrattat"));
+        // check if it is a palindrome when there is capitalisation (it should ignore capitalisation)
+        assertTrue(stringCheck.isPalindrome("Tattarrattat"));
     }
 
     /**

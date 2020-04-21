@@ -16,10 +16,25 @@ public class CalculatorTest {
     public void testSumAllNumbers() {
     	//this test currently fails on purpose
         //Integer[] numsToSum = [1, 3];
-        Integer testNum = 4;
+
+        // test null inputs
+        Integer testNum = 0;
+        assertEquals(testNum, calculator.sumAllNumbers());
+
+        // test addition of two numbers
+        testNum = 4;
         Integer testInput1 = 1;
         Integer testInput2 = 3;
         assertEquals(testNum, calculator.sumAllNumbers(testInput1, testInput2));
+
+        // test addition of three numbers
+        testNum = 6;
+        Integer testInput3 = 2;
+        assertEquals(testNum, calculator.sumAllNumbers(testInput1, testInput2, testInput3));
+
+        // test addition including a null
+        testNum = 4;
+        assertEquals(testNum, calculator.sumAllNumbers(testInput1, testInput2, null));
     }
 
     /**
@@ -29,9 +44,24 @@ public class CalculatorTest {
      * - Add tests for multiplication of multiple numbers
      *
      */
-    //@Test
+    @Test
     public void testMultiplyAllNumbers() {
-    	//write tests here
+        // Test multiplication of two numbers
+        Integer testNum = 10;
+        Integer testInput1 = 2;
+        Integer testInput2 = 5;
+
+        assertEquals(testNum, calculator.multiplyAllNumbers(testInput1, testInput2));
+
+        // Test multiplication of three numbers. 2 * 5 * 2 = 20
+        testNum = 20;
+        Integer testInput3 = 2;
+        assertEquals(testNum, calculator.multiplyAllNumbers(testInput1, testInput2, testInput3));
+
+        // Test multiplication for null inputs. Expected: 0
+        testNum = 0;
+
+        assertEquals(testNum, calculator.multiplyAllNumbers(null));
         assertTrue(true);
     }
 }
