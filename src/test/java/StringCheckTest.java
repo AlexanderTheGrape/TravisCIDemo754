@@ -20,4 +20,19 @@ public class StringCheckTest {
      * TBD:
      * - Create tests for the other methods you create in the StringCheck Class
      */
+    @Test public void testIsNull(){
+        assertTrue(stringCheck.isNull(null));
+        assertFalse(stringCheck.isNull("bob"));
+    }
+
+    @Test public void testIsEmpty(){
+        assertTrue(stringCheck.isEmpty(""));
+        assertFalse(stringCheck.isEmpty("bob"));
+    }
+
+    @Test public void testIsOnlyWhiteSpace(){
+        assertTrue(stringCheck.isOnlyWhitespace(""));
+        assertTrue(stringCheck.isOnlyWhitespace("\n"));
+        assertFalse(stringCheck.isOnlyWhitespace("bob"));
+    }
 }
