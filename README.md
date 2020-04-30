@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754.svg?branch=master)](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754)
+[![Build Status](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754.svg?branch=submission)](https://travis-ci.com/AlexanderTheGrape/TravisCIDemo754)
 # TravisCIDemo754
 
 This program includes a basic calculator and string checker.
