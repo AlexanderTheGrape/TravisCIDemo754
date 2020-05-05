@@ -1,3 +1,5 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringCheck {
     /**
@@ -5,9 +7,27 @@ public class StringCheck {
      * - Check if the string is a palindrome (a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam).
      * - Please return True if the string is a palindrome, otherwise return False
      * - Note: do not change method signature
+     * '' counts as a palindrome. does not include spaces. lower case only.
      */
+    // TODO Add functionality to remove empty substrings, so that a test can be made for spaces.
     public boolean isPalindrome (final String str) {
-        throw new RuntimeException("Write your code here");
+        try {
+            String lowercaseStr = str.toLowerCase().replace(" ", "");
+            String letters[] = lowercaseStr.split("");
+            int len = letters.length;
+
+            if (len == 0 || (letters[0] == "")){
+                return true;
+            }
+            for (int i = 0; i < len; i++) {
+                if (!letters[i].equals(letters[len - i - 1])) {
+                    return false;
+                }
+            }
+            return true;
+        } catch(Exception e){
+            return false;
+        }
     }
 
     /**
@@ -17,7 +37,11 @@ public class StringCheck {
      * - Note: do not change method signature
      */
     public boolean isEmpty(final String str) {
-        throw new RuntimeException("Write your code here");
+        if (str == ""){
+            return true;
+        } else {
+            return false;
+        }
     }
     
     /**
@@ -27,7 +51,11 @@ public class StringCheck {
      * - Note: do not change method signature
      */
     public boolean isNull(final String str) {
-        throw new RuntimeException("Write your code here");
+        if (str == null){
+            return true;
+        } else {
+            return false;
+        }
     }
     
     /**
@@ -37,6 +65,7 @@ public class StringCheck {
      * - Note: do not change method signature
      */
     public boolean isOnlyWhitespace(final String str) {
-        throw new RuntimeException("Write your code here");
+        boolean isWhitespace = str.matches("^\\s*$");
+        return isWhitespace;
     }
 }
